@@ -1,0 +1,12 @@
+<h1>5 day Forecast (every 3 hours)</h1>
+
+<ng-component *ngIf="!forecastList.length">
+  <h2>
+      No Data!
+  </h2>
+</ng-component>
+<div *ngFor="let forecast of forecastList">
+  <h3>{{forecast.main.temp}}</h3>
+  <h3>{{forecast.dateText}}</h3>
+  <p>{{forecast.weather.main}}</p>
+</div>
